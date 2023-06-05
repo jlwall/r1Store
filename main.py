@@ -12,6 +12,7 @@ x = 0
 rivUser = "<email>"
 rivPass = "<your-PW-Here>"
 poKey = "<somePOKey>"
+poUser = "poUser"
 
 while x == 0:
     now = datetime.now()
@@ -19,7 +20,7 @@ while x == 0:
     print("Current Time =", current_time)
     try:
         driver = webdriver.Safari()
-        x = fR.findR1S(driver,rivUser,rivPass, poKey)
+        x = fR.findR1S(driver,rivUser,rivPass, poKey, poUser)
     except Exception as ex:
         # Get current system exception
         ex_type, ex_value, ex_traceback = sys.exc_info()

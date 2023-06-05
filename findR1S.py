@@ -8,7 +8,7 @@ from datetime import datetime
 import pdb
 import json
 
-def findR1S(driver,rivUser,rivPass, poKey):
+def findR1S(driver,rivUser,rivPass, poKey, poUser):
     print("Logging In")
 
     url = "https://rivian.com/account?dest=/vehicle-shop/list"
@@ -115,7 +115,7 @@ def findR1S(driver,rivUser,rivPass, poKey):
             outfile.write(json_object)
 
         if cFind > 0:
-            po.user("ui6kr1gtm42mpu4mo7zqn15bvabw1i")
+            po.user(poUser)
             msg = po.msg(mss)
             msg.set("title", "Found "+str(cFind)+" R1S")
             po.send(msg)
